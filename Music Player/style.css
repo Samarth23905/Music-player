@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: rgb(26, 26, 26);
+}
+
+body{
+    background: linear-gradient(270deg, gray, green);
+}
+.box{
+    height: 100vh;
+    flex-direction: column;
+}
+.box-1{
+    flex-direction: column;
+    width: 350px;
+    height: 450px;
+    border-radius: 10px;
+    background: linear-gradient(red, blue, green);
+}
+.box-1 h4{
+    margin-bottom: 35px;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.art img{
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 20px;
+    border: 2px solid rgb(0, 106, 255);
+    border-radius: 50%;
+}
+.art-name {
+    text-align: center;
+    overflow: hidden;
+    width: 170px;
+}
+.art-name p{
+    white-space: nowrap;
+    font-weight: bold;
+}
+.run{
+    animation: run 6s linear infinite;
+}
+@keyframes run {
+    0% {
+        transform: translateX(100%);
+    } 100% {
+        transform: translateX(-100%);
+    }
+}
+.round {
+    animation: round 6s linear infinite;
+}
+@keyframes round {
+    0% {
+        transform: rotateZ(0deg);
+    } 100% {
+        transform: rotateZ(360deg);
+    }
+}
+.ctrl{
+    cursor: pointer;
+    background-color: rgb(57, 34, 211);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 0 15px;
+}
+.ctrl:hover{
+    transform: scale(1.1);
+}
+.ctrl:active{
+    transform: scale(0.9);
+}
+i{
+    font-size: 22px;
+}
+.none{
+    display: none;
+}
+.msc{
+    margin-top: 30px;
+}
+.prog{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.time{
+    color: bisque;
+    display: flex;
+    gap: 240px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+.line{
+    width: 100%;
+    height: 5px;
+    margin-top: 5px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.line:hover{
+    background-color: aqua;
+}
+.lineChild{
+    cursor: pointer;
+    position: absolute;
+    border-radius: 10px;
+    background-color: rgb(62, 116, 135);
+    width: 0%;
+    height: 100%;
+    transition: width 0.1s;
+}
+.lineChild::after{
+    content: " ";
+    position: absolute;
+    background-color: rgb(0, 213, 255);
+    cursor: pointer;
+    top: -3px;
+    right: 0;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+}

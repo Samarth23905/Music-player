@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box center">
+        <div class="box-1 center">
+            <h4 id="name"></h4>
+            <div class="art">
+                <img class="center" id="artist" src="" alt="">
+            </div>
+            <div class="art-name">
+                <p class="title run"></p>
+            </div>
+            <div class="prog">
+                <div class="time">
+                    <div class="start">
+                        <p id="start">0:00</p>
+                    </div>
+                    <div class="end">
+                        <p id="end">0:00</p>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="lineChild"></div>
+                </div>
+            </div>
+            <div class="msc center">
+                <div class="ctrl center" onclick="backward()">
+                    <i class="fa-solid fa-backward-step backwardBtn"></i>
+                </div>
+                <div class="ctrl center" id="playsong">
+                    <i class="fa-solid fa-play playBtn"></i>
+                    <i class="fa-solid fa-pause none pauseBtn"></i>
+                </div>
+                <div class="ctrl center" onclick="forward()">
+                    <i class="fa-solid fa-forward-step forwardBtn"></i>
+                </div>
+                <audio class="song" src=""></audio>
+            </div>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
